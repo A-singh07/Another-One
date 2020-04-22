@@ -1,0 +1,253 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: url(bg.jpg);
+    background-attachment: fixed;
+}
+
+/*---------- header -------------- */
+.header{
+    background: url(cover1.jpg) no-repeat;
+    background-size: 100% 130%;
+    background-color: rgb(243, 220, 89);
+    text-align: center;
+    padding: 120px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.header p{
+    text-align: left;
+    margin-left:55%;
+    font-size: large;
+}
+.header h1{
+    font-size: 50px;
+}
+
+/* ----------- Navigation bar ----------- */
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(82, 188, 230);
+    position: sticky;
+    top: 0px;  /* specify where it will stick */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.20);
+    z-index: 1;    /* to make it appear over everthing. overlapp everything  */
+    background-image: linear-gradient(to left, rgb(51, 163, 207), lightblue 50%, rgb(202, 226, 235) 60%);
+}
+.navbar a{
+    display: block;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+.navbar a:hover{
+    background-color: rgb(185, 229, 255);
+    color: black;
+}
+.navbar div{
+    align-self: flex-start;
+}
+/* Responsive CSS for Navigation bar  */
+@media all and (max-width:800px){ /* medium-sized screen */
+    .navbar{
+        justify-content: space-around;
+        background-image: linear-gradient(to left, rgb(51, 163, 207), lightblue 90%);
+    }
+}
+@media all and (max-width:600px){ /* smal sized screen */
+    .navbar{
+        flex-direction: column;
+        position: relative;
+    }
+}
+
+/* ------ Grid or Content Area ------ */
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* ------------------ Side-column ------------- */
+.side{
+    flex: 30%;
+    margin-top: 10px;
+    height: max-content;
+    background-image: linear-gradient(135deg, rgb(189, 228, 46), #faebeef6 60%);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.14);   /* h-offset  v-offset blur color  */
+    padding: 20px;
+}
+.side:hover{
+    box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.14);
+}
+.moods ul{
+    margin: 0;
+    padding: 0;
+}
+.moods li{
+    list-style-type: none;
+    padding: 2px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.moods li a{
+    display: block;
+    background-color: rgba(155, 241, 85, 0.473);
+    padding: 8px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;   
+}
+.moods li a:hover{
+    background-color: rgb(68, 121, 24);
+    color: white;
+    cursor: pointer;
+}
+
+/*-------------- main Column --------------- */
+.main{
+    flex: 70%;
+    padding: 15px;
+}
+/* separate cards for each section in the main column */
+.main div{
+    border: 1px solid lightgrey;
+    padding: 5px 20px;
+    text-align: justify;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(145deg, rgba(238, 215, 84, 0.856), white 60%);
+    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.14);   /* h-offset  v-offset blur color  */
+}
+.main div:hover{
+    box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.14)
+}
+.card-facts ol{
+    padding-left: 30px;
+}
+.card-facts li{
+    padding: 5px;
+}
+.card-facts li a{
+    display: block;
+    background-color: rgba(226, 240, 99, 0.308);
+    border-radius: 10px;
+    color: black;
+    line-height: 1.4;
+    padding: 5px;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+.card-facts li a:hover{
+    background-color: rgb(102, 189, 94);
+    color: white;
+}
+
+/* media queries for content area */
+@media all and (max-width:800px){
+    .grid{
+        flex-direction: column;
+    }
+    .side{
+        border-radius: 20px;
+    }
+    .moods ul{
+        margin: auto;
+        width:60%;
+    }
+}
+
+/* ------------- About Me ------------ */
+.about-container{
+    text-align: center;
+}
+.about-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.about-text{
+    border: 2px solid lightgrey;
+    border-radius: 8px;
+    text-align: justify;
+    padding: 10px;
+    margin: 20px;
+    max-width: 350px;
+}
+.about-pic{
+    opacity: 1;
+    border-radius: 50%;
+}
+.about-pic:hover{
+    opacity: 0.8;
+}
+
+/* Feedback Form */
+
+form{
+    text-align: center;
+    border: 1px solid lightgray;
+    margin: 2% 30%;
+}
+form div{
+    padding: 10px;
+}
+form div label{
+    padding: 10px;
+}
+.submit-btn{
+    padding: 5px;
+    background-color:lightsteelblue;
+    border: none;
+    margin: 10px;
+}
+.submit-btn:hover{
+    background-color: rgb(128, 158, 204);
+    cursor: pointer;
+}
+
+/* ---------- Footer ----------- */
+footer{
+    background-color: rgb(37, 35, 35);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* To the top */
+.top{
+    border: none;
+    padding: 10px;
+    background-color: rgb(226, 212, 148);
+}
+.top a{
+    text-decoration: none;
+}
+.top:hover{
+    background-color: rgb(214, 208, 157);
+}
+/* Contact */
+.contact{
+    color: white;
+    margin: 20px;
+}
+.contact div{
+    font-size: small;
+}
+.contact a{
+    text-decoration: none;
+    color: wheat;
+}
+.contact a:hover{
+    color: yellow;
+    text-decoration: underline;
+}
