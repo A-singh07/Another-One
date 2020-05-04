@@ -61,7 +61,7 @@ body{
         background-image: linear-gradient(to left, rgb(51, 163, 207), lightblue 90%);
     }
 }
-@media all and (max-width:600px){ /* smal sized screen */
+@media all and (max-width:600px){ /* small sized screen */
     .navbar{
         flex-direction: column;
         position: relative;
